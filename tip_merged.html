@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tip Calculator</title>
+    <style>
+        body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(164, 245, 245);
+    font-family: 'Courier New', Courier, monospace;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main_block{
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: repeat(3,100px);
+    background-color: white;
+    align-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.block1{
+    margin: 5px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-weight: bolder;
+    font-size: larger;
+}
+.block2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-weight: bolder;
+    font-size: larger;
+}
+.block3{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-weight: bolder;
+    font-size: larger;
+}
+.block4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: rgba(107, 47, 54, 0.89);
+    border-radius: 5px;
+    padding: 10px;
+    display: grid;
+}
+.bill_amt, .number_of_people{
+    width: 90%;
+    background-color: rgb(235, 239, 243);
+    border-radius: 5px;
+    border: 1px solid rgb(104, 104, 104);
+    height: 30px;
+    border-color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+
+.bill_amt, .number_of_people:focus {
+    outline: none;
+}
+
+.custom_input{
+    width:20%;
+    float: right;
+    margin-right: 60px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.block2>button{
+    background-color: rgb(112, 47, 47);
+    color: white;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 25%;
+    margin-top: 10px;
+}
+.block2>button:hover{
+    height: 25px;
+    cursor: pointer;
+    background-color: rgb(63, 28, 28);
+}
+.reset{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(143, 197, 143);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+}
+.reset:hover{
+    cursor: pointer;
+    background-color: rgb(153, 158, 111);
+}
+.class1,.class2,.class3{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="main_block">
+        <div class="block1">
+            Bill <br>
+            <input type="text" class="bill_amt" placeholder="$">
+        </div>
+        <div class="block2">
+            Select Tip Amount<br>
+            <button onclick="func(5)">5%</button>
+            <button onclick="func(10)">10%</button>
+            <button onclick="func(15)">15%</button>
+            <button onclick="func(25)">25%</button>
+            <button onclick="func(50)">50%</button>
+            <button onclick="func(0)"class="special_button" style="background-color:rgb(160, 154, 147)">Custom</button>
+            <input type="text" class="custom_input" placeholder="Custom">
+        </div>
+        <div class="block3">
+            <p>Number of people</p>
+            <input type="text" class="number_of_people">
+        </div>
+        <div class="block4">
+            <div class="class1">Tip Amount:</div>
+            <div class="class2">Total Amount</div>
+            <div class="class3">Total per person:</div>
+            <button class="reset" onclick="func1()">Reset</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function func(var1){
+    if(var1==0){
+        custom_input();
+    }
+    function custom_input(){
+        var1= document.querySelector('.custom_input').value;
+    }
+    let a = document.querySelector('.bill_amt').value;
+    let b = document.querySelector('.number_of_people').value;
+    a = Number(a);
+    b = Number(b);
+    if(a==0||b==0){
+        return 0;
+    }
+    let tip_amt=Math.floor((a/100)*var1);
+    let c = Math.floor((tip_amt+a)*100/b)/100;
+    document.querySelector('.class1').innerHTML = `Tip Amount: <br><div style="font-size:30px; font-weight:bolder; color:rgb(143, 197, 143);">$ ${tip_amt}<div>`;
+    document.querySelector('.class2').innerHTML = `Total Amount: <br><div style="font-size:30px; font-weight:bolder; color:rgb(143, 197, 143);">$ ${tip_amt+a}<div>`;
+    document.querySelector('.class3').innerHTML = `Total per person:<br> <div style="font-size:30px; font-weight:bolder; color:rgb(143, 197, 143);">$ ${c}</div>`;
+}
+function func1(){
+    location.reload();
+}
+
+</script>
+</html>
