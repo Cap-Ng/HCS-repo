@@ -1,0 +1,111 @@
+html,body{
+    height: 99%;
+    width: 99%;
+    box-sizing: border-box;
+}
+.body_top{
+    width: 450px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: thin solid rgb(221, 196, 196);
+    border-radius: 10px;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.body_top>div{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.image{
+    height: 35px;
+    width: 80px;
+    margin-top: 7%;
+}
+.image>img{
+    height: 100%;
+    width: 100%;
+}
+.text1{
+    margin-top: -15%;
+    font-size: 23px;
+}
+.text2{
+    margin-top: -12%;
+}
+.email_box{
+    width: 360px;
+    height: 50px;
+    margin-top: -10%;
+}
+.email_box>input{
+    height: 100%;
+    width: 100%;
+    text-indent: 20px;
+    font-size: large;
+    border: 1px solid rgb(221, 196, 196);
+    border-radius: 5px;
+}
+.text3{
+    margin-top: -15%;
+    align-self: flex-start;
+}
+.text3>a,.text4>a,.bottom>a{
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.737);
+    font-weight: 500;
+    font-size: 15px;
+}
+.text4{
+    align-self: flex-start;
+    font-size: 14px;
+    color:rgb(164, 137, 137);
+    margin-top: -10%;
+}
+.bottom{
+    width: 80%;
+    margin-bottom: 10%;
+}
+.bottom>a{
+    float: left;
+    padding-top: 10px;
+}
+.bottom>button{
+    float: right;
+    height: 35px;
+    width: 80px;
+    background-color: #1258eed6;
+    border: 0px transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+.body_bottom{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.help,.privacy,.terms{
+    font-size: small;
+}
+.language{
+    font-size: small;
+    text-decoration: none;        
+}
