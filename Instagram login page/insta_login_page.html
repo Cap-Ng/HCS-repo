@@ -1,0 +1,70 @@
+<!-- This code is highly inefficient. It can recieve a lot of improvements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+</head>
+<style>
+    body,html{
+        height: 95%;
+        width: 99%;
+        box-sizing: border-box;
+    }
+    .img1{
+        position: relative;
+        left: 155px;
+        top: 30px;
+    }
+    .class1{
+        width: 350px;
+        height: 420px;
+        border: 1px solid rgb(223, 212, 212);
+    }
+</style>
+<body style="background-color: #fafafa;">
+    <div class="h-full flex flex-row justify-between ">
+        <div class="w-1/2 ml-80 mt-10" style="background-repeat: no-repeat; background-image: url(https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png);">
+            <img class="img1" src="https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png" alt="">
+        </div>
+        <div class="w-1/2 mr-80">
+            <div class="class1 m-auto mt-11 flex flex-col justify-between items-center bg-white">
+                <div class="mt-12"><img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt=""></div>
+                <div class="w-3/4 text-center mt-8"><input class=" w-full h-10 rounded text-xs indent-3" style="border: 1px solid rgb(93, 231, 235);" type="text" placeholder="Phone number, username, or email"></div>
+                <div class="w-3/4 text-center mt-2"><input class="w-full h-10 rounded text-xs indent-3" style="border: 1px solid rgb(93, 231, 235);" type="password" name="" id="" placeholder="Password"></div>
+                <div class="w-3/4 text-center mt-4"><button class="w-full h-7 rounded text-base bg-sky-200 text-white">Log In</button></div>
+                <div class="w-3/4 text-center mt-2 h-10 flex flex-row">
+                    <div>----------------</div>
+                    <div class="mx-3"> OR </div>
+                    <div>----------------</div>
+                </div>
+                <div class="w-3/4 text-purple-900 flex justify-center items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="" class=" mx-1 w-4 h-4">
+                    <a href="#" class="text-sm mt-">Log in with Facebook</a>
+                </div>
+                <div class="w-3/4 mt-9 mb-8 text-center text-xs">Forgot password?</div>
+            </div>
+            <div class="class2 h-16 bg-white flex justify-center items-center m-auto mt-3" style="width: 350px; border: 1px solid rgb(223, 212, 212);">
+                <div class=" text-sm">Don't have an account?<span class="text-indigo-500 ml-1">Sign up</span></div>
+            </div>
+            <div class="flex flex-col m-auto" style="width: 350px;">
+                <div class="self-center text-sm my-6">Get the app.</div>
+                <div class="flex justify-center">
+                    <img class="h-10 mr-1" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="">
+                    <img class="h-10" src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    <div class="h-full" style="background-repeat: no-repeat; background-image: url(https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png);">
+        <img class="img1" src="https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png" alt="">
+    </div>
+-->
