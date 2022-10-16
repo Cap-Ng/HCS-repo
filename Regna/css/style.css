@@ -1,0 +1,144 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.header{
+    background: linear-gradient(90deg,rgba(118, 63, 96, 0.65),rgba(46, 12, 33, 0.65)), url('../Images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul>.home{
+    border-bottom: 3px solid rgb(166, 171, 148);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+ul>li:hover{
+    cursor: pointer;
+    border-bottom: 3px solid rgb(166, 171, 148);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.about_section{
+    width: 100%;
+}
+ .about_section>.about_block2I>i,div{
+    margin-top: 0px;
+}
+
+.about_section>.about_block2>.about_block2I>.about_block2Ia{
+    margin-top: 15px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.facts_section>.facts_sectionI>.facts_sectionIb>.facts_sectionIb1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services_section>.services_block1>.services_sectionII>.services_sectionIIa{
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 200px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-width: 1px;
+}
+.services_section>.services_block1>.services_sectionII>.services_sectionIIa>.icon{
+    /* background-color: rgb(252, 250, 251); */
+    background-color: rgb(51 65 85);
+    color: white;
+    position: relative;
+    top: -32px;
+    height: 64px;
+    width: 64px;
+    clip-path: circle(50.0% at 50% 50%);
+}
+.portfolio_section>.portfolio_blockI>.portfolio_blockIb>.portfolio_section_button{
+    width: 50px;
+    margin:10px 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    /* background-color: white; */
+    border-radius: 10px;
+}
+.portfolio_section>.portfolio_blockI>.portfolio_blockIb>.portfolio_section_button:hover{
+    background-color: rgb(217, 119, 6);
+}
+.team>.team_blockI>.team_blockIb>div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.team>.team_blockI>.team_blockIb>.team_blockIb1>div>i{
+    color: #8f6666;
+}
+.team>.team_blockI>.team_blockIb>.team_blockIb1>div>i:hover{
+    color: rgb(112, 196, 28);
+}
+
+.contact_block>.contact_blockII>.contact_blockIIa>.contact_blockIIa1>div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.contact_block>.contact_blockII>.contact_blockIIa>.contact_blockIIa1>div>i{
+    margin-right: 5px;
+    color: rgb(115, 134, 96);
+    font-size: 35px;
+}
+.contact_block>.contact_blockII>.contact_blockIIa>.contact_blockIIa2>input{
+    padding: 5px;
+    margin-top: 5px;
+    width: 80%;
+}
+
+
+@media ( max-width:1024px){    /* this property will apply upto width=1024px. at greater than 1024px, this will not apply */
+     .about_section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_section>.about_block2{
+        width: 80%;
+    }
+    .facts_section>.facts_sectionI>.facts_sectionIb>.facts_sectionIb1{
+        width: 50%;
+    }
+    .services_sectionII{
+        justify-content: space-around;
+    }
+    .services_sectionIIa{
+        width: 300px;
+        
+    }
+}
+@media(min-width:1025px){
+    .about_block1{
+        width: 50%;
+    }
+    .about_block2{
+        padding: 5px 5px 5px 5px;
+        width: 50%;
+    }
+    .services_sectionIIa{
+        width: 400px;
+    }
+}
+@media(max-width:760px) {
+    .services_sectionIIa{
+        width: 100%;
+    }
+}
+@media(max-width:999px){
+    .portfolio_images{
+        height: 400px;
+    }
+}
